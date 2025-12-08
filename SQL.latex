@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[landscape, margin=0.5in]{geometry} % Landscape for width
+\usepackage{tabularx}
+\usepackage{booktabs} % For professional lines
+\usepackage{ragged2e} % For text wrapping
+
+% Define column types
+% L = Regular text, Left aligned, auto-wrap
+% C = Code font, Left aligned, auto-wrap
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{C}{>{\ttfamily\RaggedRight\arraybackslash}X}
+
+\title{Git \& GitHub Cheat Sheet}
+\date{}
+\author{}
+
+\begin{document}
+
+{\Large \textbf{Git \& GitHub Cheat Sheet: Basics}}
+\vspace{1em}
+
+\begin{tabularx}{\textwidth}{l C L C}
+\toprule
+\textbf{Category} & \textbf{Command / Syntax} & \textbf{Description} & \textbf{Example} \\
+\midrule
+
+\textbf{Setup} & 
+git config --global user.name "[name]" & 
+Sets the name you want attached to your commit transactions. & 
+git config --global user.name "John Doe" \\ 
+\addlinespace
+
+\textbf{Setup} & 
+git clone [url] & 
+Downloads a project and its entire version history from GitHub. & 
+git clone https://github.com/user/repo.git \\ 
+\addlinespace
+
+\textbf{Initialize} & 
+git init & 
+Initializes a new local Git repository in the current folder. & 
+git init \\ 
+\addlinespace
+
+\textbf{Staging} & 
+git add [file] & 
+Stages a file (prepares it to be committed). Use "." to stage all files. & 
+git add index.html \\ 
+\addlinespace
+
+\textbf{Status} & 
+git status & 
+Lists all new or modified files to be committed. & 
+git status \\ 
+\addlinespace
+
+\textbf{Commit} & 
+git commit -m "[message]" & 
+Snapshots the file permanently in the version history. & 
+git commit -m "Fixed login bug" \\ 
+\addlinespace
+
+\textbf{Branching} & 
+git branch [branch-name] & 
+Creates a new branch. Running just "git branch" lists all branches. & 
+git branch feature-login \\ 
+\addlinespace
+
+\textbf{Switching} & 
+git checkout [branch-name] & 
+Switches to the specified branch and updates the working directory. & 
+git checkout feature-login \\ 
+\addlinespace
+
+\textbf{Merging} & 
+git merge [branch] & 
+Combines the specified branch's history into the current branch. & 
+git merge feature-login \\ 
+\addlinespace
+
+\textbf{Remote} & 
+git push origin [branch] & 
+Uploads all local branch commits to the remote repository (GitHub). & 
+git push origin main \\ 
+\addlinespace
+
+\textbf{Remote} & 
+git pull & 
+Downloads bookmark history from the remote repository and incorporates changes. & 
+git pull \\ 
+
+\bottomrule
+\end{tabularx}
+
+\end{document}
